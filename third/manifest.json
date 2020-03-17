@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+	"name": "PD",
+	"description": "Description",
+	"version": "1.0.4542461",
+    "content_scripts" : [
+        {
+            "js":[ "contentScripts.js" ],
+            "matches":[ "*://*/*" ],
+            "run_at":"document_end"
+        }
+    ],
+	"browser_action": {
+		"default_title": "make me greate again"
+	},
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	"permissions": ["declarativeContent", "activeTab","tabs","unlimitedStorage","notifications","storage"]
+}
